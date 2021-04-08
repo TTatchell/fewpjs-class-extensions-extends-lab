@@ -19,8 +19,7 @@ class Triangle extends Polygon {
     get isValid() {
         if (this.arrayOfInt[0] + this.arrayOfInt[1] <= this.arrayOfInt[2] || this.arrayOfInt[0] + this.arrayOfInt[2] <= this.arrayOfInt[1] || this.arrayOfInt[1] + this.arrayOfInt[2] <= this.arrayOfInt[0])
         return false;
-    else
-        return true;
+    else return true;
 
     }
 
@@ -28,14 +27,8 @@ class Triangle extends Polygon {
 
 class Square extends Polygon {
     get isValid() {
-        if (this.arrayOfInt[0] === this.arrayOfInt[1]) {
-            if (this.arrayOfInt[0] === this.arrayOfInt[2]) {
-                if (this.arrayOfInt[0] === this.arrayOfInt[3]) {
-                    return true;
-                }
-                else return false;
-            }
-            else return false;
+        if (this.arrayOfInt[0] === this.arrayOfInt[1] && (this.arrayOfInt[0] === this.arrayOfInt[2]) && (this.arrayOfInt[0] === this.arrayOfInt[3])) {
+            return true;
         }
         else return false;
     }
